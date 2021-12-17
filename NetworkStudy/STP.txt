@@ -6,21 +6,21 @@
 																										
 	switch1 F0/1 : 指定ポート、対向ポート(switch2 F0/1)がルートポート
     switch1 F0/2 : ルートポート
-    ルートパスコスト
-    switch1-switch2-switch4-switch3 : 19+100+100=219
-    switch1-switch4 : 100																									
+      ルートパスコスト
+      switch1-switch2-switch4-switch3 : 19+100+100=219
+      switch1-switch4 : 100																									
 	
 	switch2 F0/1 : ルートポート
-    switch2 F0/2 : 指定ポート…対向ポート(switch4 E0/1)がルートポートでなく、ルートパスコストが対向ポートより小さい
-    ルートパスコスト
-    switch2-switch1-switch3 : 19+100=119
-    switch2-switch4-switch3 : 100+100=200
+    switch2 F0/2 : ブロッキングポート…対向ポート(switch4 E0/1)がルートポートでなく、ブリッジプライオリティが対向ポートより大きい
+      ルートパスコスト
+      switch2-switch1-switch3 : 19+100=119
+      switch2-switch4-switch3 : 100+100=200
     																									
     switch3 E0/1 : 指定ポート…ルートブリッジ
     switch3 E0/2 : 指定ポート…ルートブリッジ
     																								
-    switch4 E0/1 : ブロッキングポート…対向ポート(switch2 F0/2)がルートポートでなく、ルートパスコストが対向ポートより大きい
+    switch4 E0/1 : 指定ポート…対向ポート(switch2 F0/2)がルートポートでなく、ブリッジプライオリティが対向ポートより小さい
     switch4 E0/2 : ルートポート
-    ルートパスコスト
-    switch4-switch2-switch1-switch3 : 100+19+100=219
-    switch4-switch3 : 100																								
+      ルートパスコスト
+      switch4-switch2-switch1-switch3 : 100+19+100=219
+      switch4-switch3 : 100																								
